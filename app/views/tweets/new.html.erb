@@ -1,0 +1,12 @@
+<h1>Crear tweets</h1>
+<%= form_for @tweet do |t| %>
+	<p>
+		<%= t.label :title%><br>
+		<%= t.text_field :title%><br>
+		<%= t.label :message%><br>
+		<%= t.text_field :message%>
+	</p>
+	<p>
+		<%= t.submit %>
+	</p>
+<% end %>

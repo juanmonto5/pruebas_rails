@@ -1,0 +1,11 @@
+<h1><%=@tweet.title %></h1>
+<p><%=@tweet.message %></p>
+
+<%=link_to "Crear comentario", new_tweet_comment_path(@tweet)%>
+<ul>
+    <% @comments.each do |comment|%>
+        <li>
+            <%=comment.content%>
+        </li>
+    <%end%>
+</ul>

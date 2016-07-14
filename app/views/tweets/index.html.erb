@@ -1,0 +1,11 @@
+<h1>Lista de Tweets</h1>
+	<%= link_to "New tweet", new_tweet_path%>
+		<ul>
+			<% @tweets.each do |tweet| %>
+				<li>
+					<b><%= tweet.title%></b><br>
+					<%= tweet.message%>
+				</li>
+				<%=link_to "Detalles", tweet_path(tweet) %>
+			<% end %>
+		</ul>
